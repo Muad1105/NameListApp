@@ -43,15 +43,12 @@ export const AppProvider = ({ children }) => {
 
   // Change with the entered values
   const alterValues = () => {
-    console.log({ ...changedValue, id: editItemId });
-    const newItemValue = { ...changedValue, id: editItemId };
     if (
       changedValue.name == '' ||
       changedValue.userName == '' ||
       changedValue.email == ''
     ) {
       alert('please fill the required values');
-    } else if (changedValue.email) {
     } else {
       setListData(prevValue => {
         console.log(prevValue);
