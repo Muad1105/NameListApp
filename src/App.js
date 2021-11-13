@@ -1,18 +1,16 @@
 import React from 'react';
-import './App.css';
-import NameList from './NameList';
-import PopEdit from './PopEdit';
-import Header from './Header';
-
+import Navbar from './Navbar';
+import Hero from './Hero';
+import Sidebar from './Sidebar';
+import Submenu from './Submenu';
 function App() {
   return (
-    <div className='section'>
-      <div className='structure'>
-        <Header />
-        <NameList />
-      </div>
-      <PopEdit className='pop-edit' />{' '}
-    </div>
+    <>
+      <Navbar />
+      <Sidebar />
+      <Hero />
+      <Submenu />
+    </>
   );
 }
 
