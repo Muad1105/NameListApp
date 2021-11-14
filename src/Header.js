@@ -13,12 +13,7 @@ const Header = props => {
       </div>
       {isPopEditOpen ? (
         <div className='options'>
-          <span
-            style={{
-              color: 'grey',
-            }}>
-            Options{' '}
-          </span>
+          <span>Options</span>
         </div>
       ) : (
         <div className='options'>

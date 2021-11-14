@@ -61,11 +61,11 @@ const NameList = () => {
                   <>
                     <BiEdit
                       style={{
-                        color: 'grey',
+                        color: 'blue',
                         marginRight: '5px',
                       }}
                     />
-                    <AiFillDelete style={{ color: 'grey' }} />
+                    <AiFillDelete style={{ color: 'blue' }} />
                   </>
                 ) : (
                   <>

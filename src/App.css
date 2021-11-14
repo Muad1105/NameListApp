@@ -4,10 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-transform: capitalize;
 }
 
 body {
-  background: #8fb3fc;
+  background: #fff;
 }
 
 .section {
@@ -16,18 +17,97 @@ body {
   margin: 2rem auto;
   width: 70rem;
   height: 40rem;
-  background: #fff;
+  background-clip: border-box;
+  overflow: hidden;
 }
 
 .structure {
   width: 100%;
   height: 100%;
   border: 5px solid salmon;
-  z-index: 1;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  background: url(./image/hero.svg);
+  object-fit: contain;
+  /* z-index: 1; */
 }
 
 .blur {
   filter: blur(5px);
+}
+
+/* Navbar */
+
+.nav {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('./image/navbar.svg');
+  /* background: rgb(104, 104, 104); */
+  position: relative;
+  z-index: 1;
+  box-shadow: 3px 3px 12px 3px rgba(174, 174, 174, 1);
+  padding-right: 80px;
+}
+.nav-center {
+  width: 90vw;
+  max-width: var(--max-width);
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  font-size: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  border-color: rgb(55, 55, 55);
+  color: white;
+  background: rgb(110, 110, 110);
+  cursor: pointer;
+}
+.btn:hover {
+  background: rgb(79, 78, 78);
+}
+.nav-links {
+  width: 400px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.link-btn {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #fefeff;
+  cursor: pointer;
+}
+
+.nav-logo {
+  display: flex;
+  border-radius: 10px;
+
+  margin-left: 30px;
+  padding: 4px 10px;
+  /* justify-content: space-between; */
+}
+.nav-logo-icon {
+  font-size: 50px;
+  color: rgb(199, 198, 198);
+}
+
+.logo-text {
+  margin: 10px 0 0 15px;
+  font-size: 32px;
+  color: rgb(247, 241, 241);
+}
+
+.signin-btn {
+  width: 110px;
+  padding: 7px;
 }
 
 /* Header */
@@ -37,6 +117,7 @@ body {
   justify-content: space-between;
   padding: 10px;
   border-bottom: 5px solid #d84602;
+  background: hsl(180, 79%, 96%);
 }
 
 .logo {
@@ -87,10 +168,6 @@ body {
 
 /* Name list */
 
-.name-container {
-  margin-top: 30px;
-}
-
 .description {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -101,10 +178,21 @@ body {
 .userName,
 .email,
 .action {
-  padding: 5px 0;
+  padding: 5px;
   border: 2px solid salmon;
+  border-color: transparent transparent salmon salmon;
   display: flex;
   justify-content: center;
+  max-width: 100%;
+  /* overflow-x: auto; */
+  overflow-wrap: break-word;
+}
+
+.email {
+  text-transform: lowercase;
+}
+.sl_no {
+  border-color: transparent transparent salmon transparent;
 }
 
 .edit-container {
